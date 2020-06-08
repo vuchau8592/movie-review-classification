@@ -21,7 +21,7 @@ def clean_text(text):
                     #if word not in re3)
     return text
 
-df = pd.read_csv("D:/Code/comment_project/IMDB_Dataset.csv")
+df = pd.read_csv("/IMDB_Dataset.csv")
 df['review'] = df['review'].apply(clean_text)
 df = df.sort_values("sentiment", ascending=True)
 X = df["review"]
